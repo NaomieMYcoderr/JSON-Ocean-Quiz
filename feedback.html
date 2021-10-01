@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="stylesheet" href="https://pearsonux.sfo2.cdn.digitaloceanspaces.com/css/pso-design.css"/>
+	<script src="https://unpkg.com/tippy.js@4"></script>
+</head>
+<h1>Answer Explanations!</h1>
+<body>
+  <h2>The correct answer is whale shark, read below to find out why.
+  </h2>  
+  <div class="quiz-wrapper">
+  <div style="width:600px;height:200px;border:2px solid #000; "><strong>Whale shark:</strong>
+<p>The whale shark holds the title for the largest species of any fish, known to reach more than 40 feet in length. It gets its name "whale" for being especially large</p>
+</div>
+  <div style="width:600px;height:200px;border:2px solid #000;"><strong>Big blue whale:</strong>
+<P>Although it is correct that the blue whale is the largest mammal in the sea, the question states which is the largest fish. 
+</P>
+</div>
+  <div style="width:600px;height:200px;border:2px solid #000;"><strong>Great white shark:</strong> 
+  <p> The great white shark is notorious for shark attacks causing many to tremble in fear.It’s easy to believe they are ferocious creatures. However, they rank number 10 for the largest fish in the sea. 
+  </p></div>
+  <div style="width:600px;height:200px;border:2px solid #000;"><strong>Giant pacific octopus:</strong> 
+    <p>Although Giant Pacific Octopus is the largest Octopus they are classified as invertebrates.They fall under the mollusk category in the animal kingdom and are not fish, so therefore this answer is the incorrect sea.  
+    </p>
+    </div>
+    <a href="index.html"><button type="button">Home</button></a>
+    <button id="btnNext" type= "button" onclick="next()">Next</button>
+</div>
+  </div>
+  <script>
+    (function (win, doc) {
+        'use strict';
+        doc.addEventListener("DOMContentLoaded", function(){
+          if (!document.getElementById('pe-icons-sprite')) {
+            var pe_ajax = new XMLHttpRequest();
+            pe_ajax.open("GET", "https://pearsonux.sfo2.cdn.digitaloceanspaces.com/css/p-icons-sprite-1.1.svg", true);
+            pe_ajax.responseType = "document";
+            pe_ajax.onload = function(e) {
+              document.body.insertBefore(
+                      pe_ajax.responseXML.documentElement,
+                      document.body.childNodes[0]
+              );
+              const events = new Event('iconsLoaded');
+              document.dispatchEvent(events);
+            };
+            pe_ajax.send();
+          }
+        });
+      })(window, document)
+</script>
+</body>
+</html>

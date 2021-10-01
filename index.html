@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://pearsonux.sfo2.cdn.digitaloceanspaces.com/css/pso-design.css"/>
+	<script src="https://unpkg.com/tippy.js@4"></script>
+
+</head>
+<body>
+	<h1>Undersea Quiz</h1>
+<div class="container">
+	<div id="home" class="flex-column flex-center">
+	
+		<a href="game.html" id="letsstart-btn" class="btn">Let's Start</a>
+		<h2>5 fun Questions m/c with explanations</h2>
+	</div>
+	</div>
+	<script>
+		(function (win, doc) {
+			'use strict';
+			doc.addEventListener("DOMContentLoaded", function(){
+			  if (!document.getElementById('pe-icons-sprite')) {
+				var pe_ajax = new XMLHttpRequest();
+				pe_ajax.open("GET", "https://pearsonux.sfo2.cdn.digitaloceanspaces.com/css/p-icons-sprite-1.1.svg", true);
+				pe_ajax.responseType = "document";
+				pe_ajax.onload = function(e) {
+				  document.body.insertBefore(
+						  pe_ajax.responseXML.documentElement,
+						  document.body.childNodes[0]
+				  );
+				  const events = new Event('iconsLoaded');
+				  document.dispatchEvent(events);
+				};
+				pe_ajax.send();
+			  }
+			});
+		  })(window, document)
+	</script>
+</body>
+</html>

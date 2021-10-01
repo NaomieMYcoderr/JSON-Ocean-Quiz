@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+	<title>
+		Quiz Application
+	</title>
+	<link rel="stylesheet" href="data.css"/>
+	<link rel="stylesheet" href="https://pearsonux.sfo2.cdn.digitaloceanspaces.com/css/pso-design.css"/>
+	<script src="https://unpkg.com/tippy.js@4"></script>
+</head>
+<body>
+	<div class="quiz-wrapper">
+	<div class="qPanel" class="questionbox" id="question">
+		Sample Question
+		</div>
+		<div class="ques"id="options">
+		<div><input type="radio" id="opt1" name="options">
+			<span id="optt1"></span>
+		</div>
+		<div><input type="radio" id="opt2" name="options">
+			<span id="optt2"></span>
+		</div>
+		<div><input type="radio" id="opt3" name="options">
+			<span id="optt3"></span>
+		</div>
+		<div><input type="radio" id="opt4" name="options">
+			<span id="optt4"></span>
+		</div>
+	
+</div>
+<div class="score">
+	<div class="next">
+		<button class="button" id="nxtbtn" onclick="checkAnswer()">next</button>
+		<a href="index.html" id="Home">Home</a>
+		<a href="feedback.html" id="feedback">Feedback</a>
+</div>
+	</body>
+	<script>
+		(function (win, doc) {
+			'use strict';
+			doc.addEventListener("DOMContentLoaded", function(){
+			  if (!document.getElementById('pe-icons-sprite')) {
+				var pe_ajax = new XMLHttpRequest();
+				pe_ajax.open("GET", "https://pearsonux.sfo2.cdn.digitaloceanspaces.com/css/p-icons-sprite-1.1.svg", true);
+				pe_ajax.responseType = "document";
+				pe_ajax.onload = function(e) {
+				  document.body.insertBefore(
+						  pe_ajax.responseXML.documentElement,
+						  document.body.childNodes[0]
+				  );
+				  const events = new Event('iconsLoaded');
+				  document.dispatchEvent(events);
+				};
+				pe_ajax.send();
+			  }
+			});
+		  })(window, document)
+	</script>
+	<script src="data.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
